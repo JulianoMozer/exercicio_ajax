@@ -1,0 +1,132 @@
+/* Definição de variáveis globais para facilitar a manutenção e personalização das cores */
+:root {
+    --header-color: #01a3a4; /* Cor de fundo do cabeçalho */
+    --bg-color: #e6e5dd; /* Cor de fundo geral */
+    --text-color: #333; /* Cor do texto principal */
+    --link-color: #191919; /* Cor para os links e elementos interativos */
+}
+
+/* Resetando margens, preenchimentos, e listas para garantir um layout consistente */
+* {
+    font-family: sans-serif;  /* Definindo uma fonte sans-serif para o site */
+    margin: 0;  /* Removendo margens padrão de todos os elementos */
+    padding: 0; /* Removendo preenchimento padrão */
+    box-sizing: border-box; /* Inclui bordas e margens dentro das dimensões dos elementos */
+    list-style-type: none; /* Remove marcadores de listas */
+}
+
+/* Estilo do corpo da página */
+body {
+    background-color: var(--bg-color); /* Cor de fundo usando a variável --bg-color */
+    color: var(--text-color); /* Cor do texto usando a variável --text-color */
+    font-size: 16px; /* Tamanho de fonte padrão */
+    line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+/* Estilizando o container principal da página */
+.container {
+    max-width: 640px; /* Define a largura máxima do container */
+    width: 100%; /* Faz o container ocupar 100% da largura disponível */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+}
+
+/* Estilizando o cabeçalho */
+header {
+    background-color: var(--header-color); /* Cor de fundo do cabeçalho usando a variável --header-color */
+    text-align: center; /* Centraliza o texto no cabeçalho */
+    height: 35vh; /* Define a altura do cabeçalho como 35% da altura da janela de visualização */
+    padding: 20px 0; /* Espaçamento interno vertical (20px em cima e embaixo) */
+    position: relative; /* Permite ajustes de posicionamento relativos dentro do cabeçalho */
+}
+
+/* Ajuste de posição do conteúdo dentro do cabeçalho */
+header .container {
+    position: relative;
+    top: 5%; /* Ajusta a posição do conteúdo da container para baixo em 5% da altura do cabeçalho */
+}
+
+/* Estilo do avatar do perfil */
+.profile-avatar {
+    border-radius: 50%; /* Torna o avatar circular */
+    margin-bottom: 16px; /* Espaço entre o avatar e o nome */
+    width: 100px; /* Largura do avatar */
+    height: 100px; /* Altura do avatar */
+    object-fit: cover; /* Garante que a imagem cubra completamente o círculo sem distorção */
+}
+
+/* Estilo do nome do perfil */
+.profile-name {
+    font-size: 2.2em; /* Aumenta o tamanho da fonte do nome */
+    color: var(--link-color); /* Cor do nome, usando a variável --link-color */
+}
+
+/* Estilo do nome de usuário do perfil */
+.profile-username {
+    margin: 0; /* Remove margens */
+    padding-top: 10px; /* Adiciona um pouco de espaço acima do nome de usuário */
+    font-size: 1.2em; /* Tamanho da fonte para o nome de usuário */
+    color: var(--link-color); /* Cor do nome de usuário */
+}
+
+/* Estilo do link para o perfil */
+.profile-link {
+    background-color: var(--header-color); /* Cor de fundo do botão de link */
+    color: var(--bg-color); /* Cor do texto do link */
+    padding: 10px 20px; /* Espaçamento interno do link (10px de altura e 20px de largura) */
+    display: inline-block; /* Faz o link se comportar como um bloco inline */
+    text-decoration: none; /* Remove o sublinhado padrão de links */
+    font-weight: bold; /* Torna o texto em negrito */
+    border-radius: 5px; /* Bordas arredondadas para o link */
+    transition: background-color 0.3s; /* Transição suave para a mudança de cor de fundo ao passar o mouse */
+}
+
+/* Estilo para o link quando o mouse passa sobre ele */
+.profile-link:hover {
+    background-color: #019d9e; /* Muda a cor de fundo para um tom mais escuro quando o mouse passa sobre o link */
+}
+
+/* Estilo para a seção de números (repositórios, seguidores, seguindo) */
+.numbers {
+    display: grid; /* Usa um grid layout para organizar os itens */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Cria colunas automáticas que se ajustam ao tamanho da tela */
+    gap: 20px; /* Espaço de 20px entre as colunas */
+    margin-top: 20px; /* Espaço acima da seção de números */
+}
+
+/* Estilo de cada item na seção de números */
+.numbers-item {
+    font-size: 2.5em; /* Tamanho grande para os números */
+    font-weight: bold; /* Negrito para os números */
+    color: var(--text-color); /* Cor dos números usando a variável --text-color */
+}
+
+/* Estilo para o título de cada item da seção de números */
+.numbers-item h4 {
+    font-size: 0.6em; /* Tamanho pequeno para o título */
+    color: #777; /* Cor cinza claro para os títulos */
+}
+
+.foto img {
+    width: 100%; /* Ajusta a imagem para ocupar a largura disponível */
+    max-width: 250px; /* Limita o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%; /* Deixa a imagem circular */
+    border: 3px solid #01a3a4; /* Adiciona borda */
+    object-fit: cover; /* Mantém o conteúdo da imagem sem distorção */
+    display: block; /* Remove o espaçamento inferior (default do <img>) */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .foto img {
+        max-width: 100px; /* Reduz o tamanho da imagem em telas menores */
+        width: 80%; /* Ajusta a largura da imagem no celular */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .foto img {
+        max-width: 80px; /* Um tamanho ainda menor para dispositivos muito pequenos */
+    }
+}
