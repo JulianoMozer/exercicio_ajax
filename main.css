@@ -90,7 +90,7 @@ header .container {
     display: grid; /* Usa um grid layout para organizar os itens */
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Cria colunas automáticas que se ajustam ao tamanho da tela */
     gap: 20px; /* Espaço de 20px entre as colunas */
-    margin-top: 20px; /* Espaço acima da seção de números */
+    margin-top: 32px; /* Espaço acima da seção de números */
 }
 
 /* Estilo de cada item na seção de números */
